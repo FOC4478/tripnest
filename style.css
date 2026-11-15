@@ -1,0 +1,55 @@
+
+:root {
+  --blue: #126b78;
+  --deep: #103d48;
+  --green: #c9dfb6;
+  --cream: #f7f7f0;
+  --ink: #182b2c;
+  --muted: #687979;
+  --line: #dfe6dd;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Manrope',sans-serif; background: var(--cream); color: var(--ink); line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+.header { height: 78px; display: flex; justify-content: space-between; align-items: center; padding: 0 7%; position: sticky; top: 0; z-index: 10; background: #f7f7f0ed; border-bottom: 1px solid var(--line); }
+.logo { font-size: 24px; font-weight: 800; letter-spacing: -1.5px; }.logo span { color: var(--blue); }.logo i { color: #e2a45e; font-style: normal; margin-left: 3px; }
+nav { display: flex; align-items: center; gap: 28px; font-size: 12px; font-weight: 700; }.nav-cta { background: var(--blue); color: white; padding: 11px 16px; border-radius: 5px; }
+#menuToggle { display: none; border: 0; background: none; font-size: 24px; }
+.hero { min-height: 650px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; padding: 85px 8%; background: linear-gradient(120deg,#f7f7f0,#edf3e9); }
+.eyebrow { color: var(--blue); font-size: 10px; font-weight: 800; letter-spacing: 2px; }
+h1,h2,h3 { line-height: 1.14; letter-spacing: -1.2px; }
+h1,h2 { font-family: 'Playfair Display',serif; }
+h1 { font-size: clamp(49px,6vw,76px); margin: 24px 0; }h1 em,h2 em { color: var(--blue); font-style: normal; }
+.hero-copy > p,.intro-grid p,.section-intro,.team p { color: var(--muted); font-size: 14px; max-width: 550px; }
+.hero-buttons { display: flex; align-items: center; flex-wrap: wrap; gap: 23px; margin-top: 30px; }.button { background: var(--blue); color: white; padding: 13px 18px; border-radius: 5px; font-size: 12px; font-weight: 800; }.plain-link { font-size: 12px; font-weight: 800; }
+.trust-note,.note { color: #8b9990; font-size: 10px; margin-top: 23px; }
+.hero-visual { position: relative; min-height: 440px; display: grid; place-items: center; }
+.destination-photo { width: 85%; height: 380px; border-radius: 150px 150px 12px 12px; background: linear-gradient(180deg,#78b9c3 0%,#b5d6c7 45%,#d9c58c 46%,#608d73 100%); position: relative; overflow: hidden; }
+.destination-photo:before { content: ""; position: absolute; width: 280px; height: 170px; background: #e8e5c6; border-radius: 50%; top: 100px; left: 50px; transform: rotate(-20deg); opacity: .7; }
+.photo-label,.photo-title { position: absolute; left: 28px; z-index: 1; color: var(--deep); }.photo-label { top: 28px; font-size: 9px; letter-spacing: 2px; font-weight: 800; }.photo-title { bottom: 30px; color: white; font: 700 38px 'Playfair Display'; }
+.trip-card { position: absolute; background: white; padding: 18px; width: 230px; right: -10px; bottom: 15px; border-radius: 9px; box-shadow: 0 15px 45px #193d3925; }.trip-card small,.trip-card p { display: block; color: var(--muted); font-size: 9px; }.trip-card b { display: block; margin: 8px 0; font-size: 13px; }.trip-route { display: flex; justify-content: space-between; font-size: 9px; color: var(--blue); margin: 15px 0; }
+.round-stamp { position: absolute; top: 15px; right: 0; background: var(--green); color: var(--deep); border-radius: 50%; width: 90px; height: 90px; display: grid; place-content: center; text-align: center; font-size: 9px; font-weight: 800; line-height: 1.4; transform: rotate(10deg); }
+.quick-points { background: var(--deep); color: white; display: flex; justify-content: space-around; gap: 15px; flex-wrap: wrap; padding: 20px 5%; font-size: 11px; }
+.section,.discover,.model,.roadmap { padding: 100px 9%; }.section h2,.discover h2,.model h2,.roadmap h2,.why h2 { font-size: clamp(36px,4.5vw,55px); margin: 20px 0 30px; }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
+.pain-grid,.discover-grid,.journey,.why-grid,.market-grid,.revenue,.compare,.timeline { display: grid; gap: 17px; margin-top: 45px; }
+.pain-grid { grid-template-columns: repeat(3,1fr); }.pain-grid article { border-top: 2px solid var(--green); padding: 23px 8px; }.pain-grid b { color: var(--blue); font-size: 11px; }.pain-grid h3,.destination h3,.revenue h3 { margin: 13px 0 8px; font-size: 19px; }.pain-grid p,.destination p,.journey p,.why-grid p,.market-grid p,.revenue p,.compare p,.timeline p { color: var(--muted); font-size: 12px; }
+.discover { background: #eaf0e6; }.discover-grid { grid-template-columns: repeat(3,1fr); }.destination { background: white; padding: 14px; border-radius: 8px; }.destination.featured-destination { grid-row: span 2; }.destination-art { height: 160px; display: flex; align-items: flex-end; padding: 14px; color: white; font-size: 9px; font-weight: 800; letter-spacing: 1px; border-radius: 5px; }.destination-art.coast { background: linear-gradient(145deg,#69b8c3,#d5d3a2 55%,#4b876e); height: 260px; }.destination-art.stay { background: linear-gradient(135deg,#c0a28c,#765c4d); }.destination-art.local { background: linear-gradient(135deg,#d3a66c,#9d674c); }.destination-art.plan { background: linear-gradient(135deg,#6c9f99,#235f64); }
+.journey { grid-template-columns: repeat(4,1fr); }.journey > div { padding: 18px; border-top: 2px solid var(--blue); }.journey span { color: var(--blue); font-size: 11px; font-weight: 800; }.journey h3 { margin: 14px 0 8px; font-size: 18px; }
+.why { background: var(--blue); color: white; padding: 90px 9%; }.why .eyebrow { color: var(--green); }.why h2 em { color: var(--green); }.why-grid { grid-template-columns: repeat(3,1fr); border-top: 1px solid #ffffff55; padding-top: 25px; }.why-grid b { font-size: 16px; }.why-grid p { color: #d4e8e8; margin-top: 8px; }
+.market-grid { grid-template-columns: repeat(3,1fr); }.market-grid article { border: 1px solid var(--line); border-radius: 8px; padding: 27px; }.market-grid small { color: var(--blue); letter-spacing: 2px; font-weight: 800; }.market-grid b { display: block; font: 700 25px 'Playfair Display'; margin: 15px 0; }
+.model { background: var(--deep); color: white; }.model .eyebrow { color: var(--green); }.model h2 em { color: var(--green); }.revenue { grid-template-columns: repeat(3,1fr); }.revenue article { padding: 25px; border: 1px solid #ffffff30; }.revenue span { color: var(--green); font-size: 11px; }.revenue p { color: #c4d5d0; }
+.compare { grid-template-columns: repeat(3,1fr); }.compare article { padding: 25px; background: #edf0e8; border-radius: 7px; }.compare h3 { margin-bottom: 12px; font-size: 18px; }.compare .compare-highlight { background: var(--green); }
+.roadmap { background: #edf0e8; }.timeline { grid-template-columns: repeat(4,1fr); }.timeline > div { border-left: 2px solid var(--blue); padding: 5px 15px; }.timeline small { color: var(--blue); font-size: 9px; letter-spacing: 1px; }.timeline h3 { margin: 12px 0; font-size: 18px; }
+.contact { padding: 85px 9%; background: #d3e3cb; }.contact .eyebrow { color: var(--blue); }.contact h2 { font: 700 clamp(38px,5vw,60px) 'Playfair Display'; margin: 20px 0; }.contact > p { color: var(--muted); max-width: 570px; }.contact-bottom { border-top: 1px solid #a9b9a6; margin-top: 35px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }.contact-bottom a { background: var(--deep); color: white; padding: 13px 18px; border-radius: 5px; }
+footer { display: flex; justify-content: space-between; align-items: center; padding: 28px 7%; font-size: 10px; color: var(--muted); }
+@media(max-width:850px) { .hero { grid-template-columns: 1fr; }.hero-visual { max-width: 550px; width: 100%; margin: auto; }.intro-grid { grid-template-columns: 1fr; gap: 15px; }.discover-grid { grid-template-columns: 1fr 1fr; }.destination.featured-destination { grid-row: auto; } }
+@media(max-width:600px) {
+  .header { padding: 0 5%; }#menuToggle { display: block; }
+  nav { display: none; position: absolute; top: 77px; left: 0; right: 0; background: var(--cream); padding: 22px; flex-direction: column; align-items: flex-start; }nav.open { display: flex; }
+  .hero,.section,.discover,.model,.roadmap,.why,.contact { padding: 65px 6%; }
+  .hero-visual { min-height: 380px; }.destination-photo { height: 310px; width: 90%; }.trip-card { right: -5px; width: 195px; }.round-stamp { width: 75px; height: 75px; }
+  .pain-grid,.discover-grid,.journey,.why-grid,.market-grid,.revenue,.compare,.timeline { grid-template-columns: 1fr; }
+  .destination-art.coast { height: 190px; }.contact-bottom,footer { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
